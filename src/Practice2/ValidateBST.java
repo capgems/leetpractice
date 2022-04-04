@@ -24,8 +24,12 @@ public class ValidateBST {
             return false;
         }
 
-        if (node.left != null) left = validateBST(node.left, node.val, min);
-        if (node.right != null) right = validateBST(node.right, max, node.val);
+        if (node.left != null) {
+            left = validateBST(node.left, node.val, min);
+        }
+        if (node.right != null) {
+            right = validateBST(node.right, max, node.val);
+        }
 
         return left && right;
     }
